@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-product',
@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
-
+  // @Input(productProperties) product: any;--can be used uses either one of two
+  @Input() productProperties: any;
   constructor() { }
-
   ngOnInit() {
   }
 
 }
+

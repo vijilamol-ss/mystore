@@ -8,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   constructor() { }
-
+  // Event binding
+  addToCart() {
+    console.log('clicked');
+  }
   ngOnInit() {
   }
 

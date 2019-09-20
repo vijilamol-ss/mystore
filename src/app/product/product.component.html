@@ -1,8 +1,15 @@
 <div class="card">
-  <img src="/assets/images/image1.png" class="card-img-top" alt="...">
+  <!-- property binding to image tag (A type of data binding)
+  otherwise string interpolation can be used "{{product.productImage}}"
+  -->
+  <img 
+  [src]="productProperties.productImage"
+  class="card-img-top" 
+  alt="Image"
+  >
     <div class="card-body">
-      <h5 class="card-title">Comet</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <h5 class="card-title">{{productProperties.productName}}</h5><!--stringInterpolation(Small conditions can be checked like ternary operator) -->
+      <p class="card-text">{{productProperties.productDescription}}</p>
       <a href="#" class="btn btn-primary">Buy Now</a>
     </div>
 </div>

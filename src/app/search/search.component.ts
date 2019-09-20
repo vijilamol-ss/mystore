@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class SearchComponent implements OnInit {
 
   constructor() { }
-
+  searchContent: string; // banana in a box
   ngOnInit() {
   }
 
