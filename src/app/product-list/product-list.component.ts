@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Product } from '../models/product';
+import { Product } from '../models/product'; // interface importing
 import { ProductService } from '../services/product.service';
 
 @Component({
@@ -8,7 +8,7 @@ import { ProductService } from '../services/product.service';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
-  productList: Product[] = [];
+  productList: Product[] = []; // interface Product is assigned to a variable
   // dependency injection buy using the constructor
   constructor(private productService: ProductService) {
       // this.productList = this.productService.getProducts(); // for getting the product

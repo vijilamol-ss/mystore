@@ -5,12 +5,16 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http'; // for communicate with rest api
 
 //  user defined modules
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { SearchComponent } from './search/search.component';
 import { ProductComponent } from './product/product.component';
 import { FooterComponent } from './footer/footer.component';
+import { AppRoutingModule } from './app-routing.module';
+import { ProductDetailsComponent } from './product-details/product-details.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 // @ng module object and its properties definition part
 @NgModule({
@@ -20,9 +24,12 @@ import { FooterComponent } from './footer/footer.component';
     ProductListComponent,
     SearchComponent,
     ProductComponent,
-    FooterComponent
+    FooterComponent,
+    ProductDetailsComponent,
+    CheckoutComponent
   ],
   imports: [
+    AppRoutingModule, // routing module
     BrowserModule,
     FormsModule, // formsModule is for banana in a box
     HttpClientModule // imported above is include here
