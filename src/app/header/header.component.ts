@@ -9,7 +9,7 @@ export class HeaderComponent implements OnInit {
 
   constructor() { }
   // Event binding
-  addToCart() {
+  myCart() {
     console.log('clicked');
   }
   ngOnInit() {

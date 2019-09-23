@@ -1,11 +1,12 @@
 
 <div class="row mt-5">
+        <!-- *ngFor is for looping structure -->
+        <app-product *ngFor="let item of productList" class="col-4" [productProperties]="item"></app-product>
+        <!-- <app-product class="col-4" [productProperties]="productList[1]"></app-product>
+        <app-product class="col-4" [productProperties]="productList[2]"></app-product>
         <app-product class="col-4" [productProperties]="product"></app-product>
-        <app-product class="col-4" [productProperties]="product"></app-product>
-        <app-product class="col-4" [productProperties]="product"></app-product>
-        <app-product class="col-4" [productProperties]="product"></app-product>
-        <app-product class="col-4" [productProperties]="product"></app-product>
-        <app-product class="col-4" [productProperties]="product"></app-product>
+        <app-product class="col-4" [productProperties]="product"></app-product> -->
+        <!-- <app-product class="col-4"></app-product> -->
         <!-- <div class="col-4">
             <div class="card">
                 <img src="/assets/images/image2.png" class="card-img-top" alt="...">
@@ -27,3 +28,4 @@
               </div>
         </div> -->
 </div>
+<!-- <p>{{productList | json}}</p> --> 

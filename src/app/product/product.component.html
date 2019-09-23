@@ -3,13 +3,20 @@
   otherwise string interpolation can be used "{{product.productImage}}"
   -->
   <img 
-  [src]="productProperties.productImage"
+  [src]="productProperties.imageUrl"
   class="card-img-top" 
   alt="Image"
   >
     <div class="card-body">
-      <h5 class="card-title">{{productProperties.productName}}</h5><!--stringInterpolation(Small conditions can be checked like ternary operator) -->
-      <p class="card-text">{{productProperties.productDescription}}</p>
-      <a href="#" class="btn btn-primary">Buy Now</a>
+      <h5 class="card-title">{{productProperties.title |uppercase}}</h5><!--stringInterpolation(Small conditions can be checked like ternary operator) -->
+      <p class="card-text">{{productProperties.description}}</p>
+      <a href="#" class="btn btn-primary" (click)="addToCart()" *ngIf="productProperties.isAvailable; else elseBlock">
+        Buy Now
+      </a>
+      <ng-template #elseBlock class="btn btn-secondary">
+          <button type="button" class="btn btn-warning" (click)="addToCart()">Sold Out</button> 
+      </ng-template>
+      <button type="button" class="btn btn-info" (click)="addToCart()">Details</button>
+      <!-- <a href="#" class="btn btn-primary" -->
     </div>
 </div>
